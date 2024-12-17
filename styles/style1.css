@@ -129,22 +129,40 @@ nav ul li:hover {
     nav ul{
         display: none;}
 }
+.skill img {
+    width: auto; /* Maintient la largeur proportionnelle */
+    height: 50px; /* Taille fixe ou ajustée selon vos besoins */
+    object-fit: contain; /* Assure que l'image n'est pas étirée */
+    margin-bottom: 10px; /* Ajoute un espace entre l'image et la barre */
+}
 
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* Réduction des barres de progression */
 .progress {
-    padding: 6px;
-    border-radius: 30px;
-    background: rgba(0, 0, 0, 0.25);  
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    width: 100%; /* Prend la largeur de l'élément parent */
+    padding: 4px; /* Réduction de la hauteur */
+    margin-top: 10px; /* Espacement avec l'image */
 }
-  
+
 .progress-bar {
-    height: 10px;
-    border-radius: 30px;
-    background-image: 
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
-    transition: 0.4s linear;  
-    transition-property: width, background-color;    
+    height: 8px; /* Hauteur plus petite */
+    border-radius: 20px;
 }
+
   
 .progress-moved .progress-bar {
     width: 85%; 
@@ -152,20 +170,39 @@ nav ul li:hover {
 }
 
 .progress-moved2 .progress-bar {
-    width: 71%; 
+    width: 80%; 
     background-color: rgb(0, 0, 255);  
 }
 
 .progress-moved3 .progress-bar {
-    width: 40%; 
+    width: 60%; 
     background-color: rgb(255, 255, 0);  
 }
 
 .progress-moved4 .progress-bar {
-    width: 56%; 
-    background-color: rgb(255, 0, 255);  
+    width: 65%; 
+    background-color: rgb(180, 0, 180);  
 }
 
+.progress-moved5 .progress-bar {
+    width: 50%; 
+    background-color: rgb(255, 176, 29);  
+}
+
+.progress-moved6 .progress-bar {
+    width: 65%; 
+    background-color: rgb(106, 11, 173)
+}
+
+.progress-moved7 .progress-bar {
+    width: 65%; 
+    background-color: rgb(25, 255, 25);  
+}
+
+.progress-moved8 .progress-bar {
+    width: 36%; 
+    background-color: rgb(167, 33, 33);  
+}
 a{
     position: relative;
     text-decoration: none;
