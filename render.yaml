@@ -1,0 +1,9 @@
+services:
+  - name: mon-portfolio
+    type: web
+    runtime: docker
+    repo: https://github.com/Erchosr/Portfolio
+    branch: main
+    dockerfilePath: Dockerfile
+    plan: free
+    autoDeploy: true
