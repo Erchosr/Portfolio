@@ -1,7 +1,14 @@
-FROM php:8.1-apache
+# Utilise l’image officielle PHP avec le serveur embarqué
+FROM php:8.2-cli
 
-COPY . /var/www/html/
+# Copie tous les fichiers de ton repo dans le conteneur
+COPY . /var/www/html
 
-RUN a2enmod rewrite
+# Définit le dossier de travail
+WORKDIR /var/www/html
 
-RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+# Ouvre le port requis par Render
+EXPOSE 10000
+
+# Démarre le serveur PHP
+CMD ["php", "-S", "0.0.0.0:10000"]
